@@ -16,6 +16,6 @@
   --app-color-secondary: #c00000;
   --app-color-tertiary: #994d00;
   
-  --app-box-radius: 6px;
+  --app-border-radius: 6px;
   --app-box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
 }

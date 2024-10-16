@@ -6,7 +6,90 @@ html {
   font-family: 'Nunito Sans', 'Fira Sans', Arial, sans-serif;
 }
 
-body {
-  background-color: var(--app-color-dark-bg);
+/* ------------------------------------------------ */
+/* ---------         HEADER          -------------- */
+/* ------------------------------------------------ */
+header {
+  height: 50px;
+
+  ul {
+    width: 250px;
+  }
 }
 
+nav {
+  width:325px;
+
+  a{
+    padding: 8px;
+    border-radius: var(--app-border-radius);
+  }
+
+  a:hover {
+    background-color: blue;
+  }
+
+  .button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    margin-left: 5px;
+    align-self: center;
+    line-height: 35px;
+  }
+}
+
+.header-wrapper {
+  line-height: 50px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  align-self: center;
+}
+
+/* ------------------------------------------------ */
+/* ------------      HERO BANNER     -------------- */
+/* ------------------------------------------------ */
+
+.hero-banner {
+  background-color: var(--app-color-dark-bg);
+  height: 100svh; 
+
+}
+.banner-content {
+  height: calc(100svh - 50px);
+  color:white;
+}
+
+.banner-text {
+  width: 50%;
+  text-align: center;
+}
+
+.banner-title {
+  font-family: Teko;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.banner-blurb {
+  font-size: 18px;
+  font-weight: 300;
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+.intouch-button {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;  
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+.banner-image {
+  align-self: center;
+}
