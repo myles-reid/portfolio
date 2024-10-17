@@ -50,6 +50,9 @@ a {
   position: absolute;
 }
 
+.align-center {
+  align-items: center;
+}
 .justify-left {
   justify-self: left;
 }

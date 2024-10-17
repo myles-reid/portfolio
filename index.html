@@ -23,30 +23,28 @@
           <div class="icon">
             <img src="./assets/img/favicon.png">
           </div>
-          <nav class="flex flex-between">
-            <ul class="flex flex-between">
-              <li><a class="easeinout" href="#">About</a></li>
-              <li><a class="easeinout" href="#">Experience</a></li>
-              <li><a class="easeinout" href="#">Contact</a></li>
+          <nav class="flex flex-even">
+            <ul class="flex flex-even">
+              <li><a class="easeinout" href="#about">About</a></li>
+              <li><a class="easeinout" href="#experience">Experience</a></li>
             </ul>
-            <div class="button easeinout">
+            <div class="button easeinout flex">
               <i id="mode-symbol" class="fa-solid fa-moon easeinout"></i>
             </div>
           </nav>
         </div>
       </header>
-      <div class="banner-content flex flex-between container">
+      <div class="banner-content flex align-center container">
         <div class="banner-text flex flex-column center">
           <div class="banner-title">
             <h2>
               <span>I'm</span>
               <span class="word-wrapper">
-                <span>A student</span>
-                <span>A life-long learner</span>
-                <span>A future Developer</span>
-                <span>Enthusiastic</span>
+                <span>a student.</span>
+                <!-- <span>a life-long learner.</span>
+                <span>a future Developer.</span>
+                <span>Enthusiastic.</span> -->
               </span>
-              <span>.</span>
             </h2>
           </div>
           <div class="banner-blurb">
@@ -55,30 +53,60 @@
               learn more and expand my knowledge
             </p>
           </div>
-          <a class="intouch-button" href="mailto:Myles%20Reid%3cmyles@reidsmailbox.com%3e">
+          <a class="intouch-button easeinout" href="mailto:Myles%20Reid%3cmyles@reidsmailbox.com%3e">
             Get in Touch
           </a>
         </div>
-        <div class="banner-image">
+        <!-- <div class="banner-image">
           <img src="./assets/img/portrait.png">
-        </div>
-      </div>
+        </div> -->
+      </div>    
     </div>
-    <main>
-      <section class="about">
+    <main class="container">
+      <section id="about" class="about">
+        <h3>About me</h3>
         <div>
-          <p>Random content to fill for now</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus 
+            aliquid debitis ipsam nam eum inventore iure eos et repudiandae 
+            deserunt, rerum, dolorem quam, vitae consequuntur nostrum non facere 
+            sed odio?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Totam illo error, architecto ad neque qui, eum eligendi aspernatur, 
+            tempora veritatis numquam a. Labore vel, non quas natus voluptatibus 
+            atque error.
+          </p>
         </div>
       </section>
-      <section class="experience">
-
-      </section>
-      <section class="contact">
-
+      <section id="experience" class="experience">
+        <h3>Experience</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Inventore architecto a voluptates atque repellendus, facilis, harum, 
+          aliquam tempora adipisci voluptatem exercitationem vel. Enim, deserunt 
+          eius. Molestiae impedit explicabo voluptate fuga.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, 
+          commodi quae, illo accusantium possimus error quibusdam nihil, optio alias
+           reprehenderit est nesciunt recusandae corrupti qui mollitia distinctio 
+           tenetur cum culpa.
+        </p>
       </section>
     </main>
     <footer>
-
+      <div class="container flex flex-between">
+        <div class="icons flex flex-between">
+          <a><i class="fa-regular fa-envelope easeinout"></i></a>
+          <a><i class="fa-brands fa-linkedin easeinout"></i></a>
+          <a><i class="fa-brands fa-github easeinout"></i></a>
+        </div>
+        <div>
+          <p>Copyright&copy 2024, Myles Reid</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

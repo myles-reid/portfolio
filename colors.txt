@@ -1,0 +1,11 @@
+#523250
+#a9d5e7
+#de396b
+#d4d828
+
+gradient
+      #2d2d63
+      #4232a0
+      #b1beea
+
+#6bd9f2 (shirt Color)

@@ -18,4 +18,24 @@
   
   --app-border-radius: 6px;
   --app-box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+
+  --app-dark-gradient: linear-gradient(#1a1d28, #1e1a28, #251a28, #2a2437)
+}
+
+a{
+  color:#523250
+  #6a4b67
+  #a9d5e7
+  #e03e6f
+  #e875ba
+  #d4d828
+
+  #f29439
+  
+  gradient
+        #2d2d63
+        #4232a0
+        #b1beea
+  
+  #6bd9f2 (shirt Color)
 }
