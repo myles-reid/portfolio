@@ -71,6 +71,10 @@ a {
   place-items: center;
 }
 
+.display-none {
+  display: none;
+}
+
 .row {
   gap: 20px;
   flex-wrap: wrap;

@@ -16,8 +16,11 @@
     <link rel="stylesheet" media="all" href="./assets/css/style.css">
     <script src="./assets/js/index.js" defer></script>
   </head>
-  <body id="body">
-    <div class="divider-color">
+  <body id="body" class="easeinout">
+    <div id="button-sticky" class="button-fixed display-none center">
+      <i id="sticky-symbol" class="fa-solid fa-moon easeinout"></i>
+    </div>
+    <div class="divider-color easeinout">
       <div class="hero-banner">
         <header>
           <div class="container flex flex-between header-wrapper">
@@ -42,9 +45,6 @@
                 <span>I'm</span>
                 <span class="word-wrapper">
                   <span class="phrase">a student.</span>
-                  <!-- <span class="second-phrase">a future Developer.</span>
-                  <span class="third-phrase">Enthusiastic.</span>
-                  <span class=>Myles Reid.</span> -->
                 </span>
               </h2>
             </div>
@@ -62,56 +62,60 @@
       </div>
     </div>
     <main>
-    <div class="section-wrapper">
+    <div class="section-wrapper easeinout">
       <section id="about" class="about container">
         <div class="flex flex-column section-wrapper-inner">
           <h3>About me</h3>
-          <div class="about-box flex">
-            <div class="cats flex flex-column center">
+          <div class="about-box flex flex-between">
+            <div class="brief-bio flex flex-column center">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                aliquid debitis ipsam nam eum inventore iure eos et repudiandae
-                deserunt, rerum, dolorem quam, vitae consequuntur nostrum non facere
-                sed odio?
+                Currently based in Winnipeg, I have been around the block a few time
+                in terms of what I wanted to do with my life.
               </p>
+                <ul>
+                  <li>Music Education</li>
+                  <li>Car detailer</li>
+                  <li>Escape Room Handler</li>
+                  <li>Culinary Arts</li>
+                  <li>Software Development</li>
+                </ul>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Totam illo error, architecto ad neque qui, eum eligendi aspernatur,
-                tempora veritatis numquam a. Labore vel, non quas natus voluptatibus
-                atque error.
+                Passions for solving puzzles makes being a developer the best choice
               </p>
+            </div>
+            <div class="img">
+              <img class="img-cat" src="./assets/img/cats.jpg" alt="Myles' Cats">
             </div>
           </div>
           <div class="about-box flex flex-backwards">
-            <div class="games flex flex-column center">
+            <div class="cats flex flex-column center">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                aliquid debitis ipsam nam eum inventore iure eos et repudiandae
-                deserunt, rerum, dolorem quam, vitae consequuntur nostrum non facere
-                sed odio?
+                My wife and I have 2 cats and we love them both to little bits.;
+                There is nothing that will take us from our children.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Totam illo error, architecto ad neque qui, eum eligendi aspernatur,
-                tempora veritatis numquam a. Labore vel, non quas natus voluptatibus
-                atque error.
+                Monet is the sassy, fiery calico that we first brought home almost 
+                4 years ago now. Matisse is our soft, gentle little shadow. Although
+                he's a scared little guy, hes a wonderful cuddler.
               </p>
             </div>
           </div>
-          <div class="about-box flex">
+          <div class="about-box flex flex-between">
             <div class="food flex flex-column center">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                aliquid debitis ipsam nam eum inventore iure eos et repudiandae
-                deserunt, rerum, dolorem quam, vitae consequuntur nostrum non facere
-                sed odio?
+                Having a culinary arts degree brings my passion for food and the 
+                details that come with cooking and making food not only look good, 
+                but take good as well. It all comes down to the small things
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Totam illo error, architecto ad neque qui, eum eligendi aspernatur,
-                tempora veritatis numquam a. Labore vel, non quas natus voluptatibus
-                atque error.
+                Once I received my culinary arts degree, I spent some time working
+                in a little place called Sydney Australia.
               </p>
+            </div>
+            <div class="img">
+              <img class="img-food" src="./assets/img/tartare.jpg" 
+              alt="Bison Tartare Myles created"
+              >
             </div>
           </div>
         </div>
@@ -120,39 +124,58 @@
       <section id="experience" class="experience container">
         <div class="flex flex-column">
           <h3>Experience</h3>
-          <div class="exp-box flex flex-backwards">
+          <div class="exp-box flex flex-backwards flex-between">
             <div class="cooking flex flex-column center">
               <p>
-                <!-- I am familiar with foundational web development technologies 
-                such as HTML and CSS, and am continually building my skill set. 
-                While comfortable with CSS, he recognizes there is always more to 
-                learn and eagerly embraces the challenge. Myles is also starting 
-                to explore the world of JavaScript, where he has developed a basic 
-                understanding of control flow and loops, laying the groundwork for 
-                more complex projects in the future. -->
+                Cooking has brought taught me a lot of discipline and attention to 
+                details. The small things in project can make the biggest of 
+                differences.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus,
-                commodi quae, illo accusantium possimus error quibusdam nihil, optio alias
-                 reprehenderit est nesciunt recusandae corrupti qui mollitia distinctio
-                 tenetur cum culpa.
+                Knowing where things are, how things work, and knowing how to put
+                everything together is an important part of life that I plan to bring
+                forward into my Development career
               </p>
             </div>
+            <div class="flex flex-column center">
+              <div class="img sys-info">
+                <img src="./assets/img/system-info.png" alt="Simple System info tracker">
+              </div>
+              <div class="link flex center">
+                <a target="_blank" href="https://github.com/myles-reid/system-status">
+                  Simple System info project
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="exp-box flex">
+          <div class="exp-box flex flex-between">
             <div class="languages flex flex-column center">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore architecto a voluptates atque repellendus, facilis, harum,
-                aliquam tempora adipisci voluptatem exercitationem vel. Enim, deserunt
-                eius. Molestiae impedit explicabo voluptate fuga.
+              <p class="badges flex flex-between">
+                <img 
+                src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                alt="HTML badge">
+                <img 
+                src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" 
+                alt="CSS badge"> 
+                <img
+                src="https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript"
+                alt="JavaScript badge">
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus,
-                commodi quae, illo accusantium possimus error quibusdam nihil, optio alias
-                 reprehenderit est nesciunt recusandae corrupti qui mollitia distinctio
-                 tenetur cum culpa.
+                Currently comfortable with HTML and CSS, while still learning a lot
+                in JavaScript. I plan on advancing my knowledge a lot more in the 
+                very near future with Java, Python, C++ and others.
               </p>
+            </div>
+            <div>
+              <div class="img img-temp">
+                <img class="temp" src="./assets/img/temp-convert.png" alt="Myles' Cats">
+              </div>
+              <div class="link flex center">
+                <a target="_blank" href="https://github.com/myles-reid/temperature-converter">
+                  Simple Temperature converter Project
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -165,6 +188,7 @@
           <a><i class="fa-brands fa-linkedin easeinout"></i></a>
           <a><i class="fa-brands fa-github easeinout"></i></a>
         </div>
+        <div class="totop easeinout"><a href='#' class="easeinout">To top</a></div>
         <div>
           <p>Copyright&copy 2024, Myles Reid</p>
         </div>

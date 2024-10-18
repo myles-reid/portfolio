@@ -22,11 +22,13 @@ const modeSymbol = select('#mode-symbol');
 const bannerBlurb = select('.banner-blurb');
 const words = select('.word-wrapper');
 const phrase = select('.phrase')
+const stickyButton = select('#button-sticky');
+const stickySymbol = select('#sticky-symbol');
 
 
 
 //Dark mode toggle function
-function symbolSwap() {
+function symbolSwapTop() {
  if (modeSymbol.classList.contains('fa-moon') && !modeSymbol.classList.contains('fa-sun')) {
   classRemove(modeSymbol, 'fa-moon');
   classAdd(modeSymbol, 'fa-sun');
@@ -36,9 +38,26 @@ function symbolSwap() {
  }
 };
 
+function symbolSwapSticky() {
+  if (stickySymbol.classList.contains('fa-moon') && !stickySymbol.classList.contains('fa-sun')) {
+   classRemove(stickySymbol, 'fa-moon');
+   classAdd(stickySymbol, 'fa-sun');
+  } else {
+   classRemove(stickySymbol, 'fa-sun');
+   classAdd(stickySymbol, 'fa-moon');
+  }
+ };
+
 listen('click', modeButton, function() {
   body.classList.toggle('dark-mode');
-  symbolSwap();
+  symbolSwapTop();
+  symbolSwapSticky();
+});
+
+listen('click', stickyButton, function() {
+  body.classList.toggle('dark-mode');
+  symbolSwapTop();
+  symbolSwapSticky();
 });
 
 
@@ -85,12 +104,25 @@ listen('load', window, () => {
 });
 
 
-// move mode toggle on scroll
-
+// display fixed button on scroll
 listen('scroll', window, () => {
- if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-  classAdd(modeButton, 'button-move');
+ if (document.documentElement.scrollTop > 50){
+  classRemove(stickyButton, 'display-none')
+  classAdd(stickyButton, 'flex');
  } else {
-  classRemove(modeButton, 'button-move');
+  classRemove(stickyButton, 'flex');
+  classAdd(stickyButton, 'display-none');
  }
 });
+
+listen('scroll', window, () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+    classRemove(stickyButton, 'button-fixed-fixed')
+    classAdd(stickyButton, 'button-sticky-bottom');
+  } else {
+    classRemove(stickyButton, 'button-sticky-bottom');
+    classAdd(stickyButton, 'button-fixed-fixed');
+  }
+});
+
+

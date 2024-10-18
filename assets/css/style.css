@@ -8,7 +8,168 @@ html {
 
 body {
   background-color: var(--app-color-light-bg);
+  
 }
+
+.dark-mode {
+  color: #d6d6d6;
+  background-color: var(--app-color-dark-bg);
+  
+  .hero-banner::before {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 150svh;
+    content: "";
+    background-color: rgb(0 0 0 / 50%);
+    z-index: -1;
+  }
+
+  .button-fixed {
+    background-color: #d6d6d6;
+    color: #daa520;
+    
+    .fa-solid {
+      color: #daa520;
+    }
+  }
+
+  .fa-solid {
+    color:#daa520;
+  }
+
+  nav {
+    a{
+      background-color: rgb(0 0 0 / 50%);
+      color: #d6d6d6;
+    }
+  }
+
+  .button {
+    background-color: #d6d6d6;
+
+    .fa-solid {
+      color:#daa520;
+    }
+  }
+
+  .banner-content {
+    color: #d6d6d6;
+  }
+
+  .banner-text, footer {
+    background-image:
+    linear-gradient(to bottom right, 
+      rgb(56 63 86 / 80%), 
+      rgb(66 74 101 / 80%), 
+      rgb(86 97 132 / 80%) 
+      );
+  }
+
+  .intouch-button {
+    background-color: #e03e6f;
+  }
+
+  .intouch-button:hover {
+    background-color:#e875ba;
+  }
+
+  .divider-color {
+    background-color: #16122f;
+  }
+
+  .section-wrapper {
+    background-color: #16122f;
+  }
+  
+  .about, .experience {
+    h3 {
+    color: #cfc9eb;
+    text-shadow: 1px 1px 1px #8f82d1,
+        1px 2px 1px #8f82d1,
+        1px 3px 1px #8f82d1,
+        1px 4px 1px #8f82d1,
+        1px 5px 1px #8f82d1,
+        1px 6px 1px #8f82d1,
+        1px 7px 1px #8f82d1,
+        1px 8px 1px #8f82d1,
+        1px 9px 1px #8f82d1,
+        1px 10px 1px #8f82d1,
+    1px 18px 6px rgba(150,150,150,0.4),
+    1px 22px 10px rgba(150,150,150,0.2),
+    1px 25px 35px rgba(150,150,150,0.2),
+    1px 30px 60px rgba(150,150,150,0.4);
+    }
+  }
+
+  
+  .brief-bio, .languages {
+    background-image: 
+    linear-gradient(to bottom right, 
+    rgb(63 63 139 / 80%),
+    rgb(78 59 190 / 80%),
+    rgb(131 151 222 / 80%));
+  }
+  .cats, .cooking {
+    background-image: 
+    linear-gradient(to top left, 
+    rgb(63 63 139 / 80%),
+    rgb(78 59 190 / 80%),
+    rgb(131 151 222 / 80%));
+  }
+
+  .food {
+    background-image: 
+    linear-gradient(to left, 
+    rgb(63 63 139 / 80%),
+    rgb(78 59 190 / 80%),
+    rgb(131 151 222 / 80%));
+  }
+
+.img {
+  filter: drop-shadow(0px 0px 1px rgb(255 255 255 / 50%));
+}
+  .link a {
+    color: #e6e6e6;
+  }
+  .icons{
+    
+    .fa-linkedin:hover {
+      filter: contrast(80%);
+    }
+    .fa-github:hover {
+      filter: contrast(100%);
+    }
+  }
+
+}
+
+.button-fixed {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  
+  .fa-solid {
+    position: relative;
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.button-fixed-fixed {
+  inset: auto 20px 20px auto;
+  transition: all 0.15s ease-out;
+}
+
+.button-sticky-bottom {
+  inset: auto 20px 90px auto;
+  transition: all 0.25s;
+}
+
 
 /* ------------------------------------------------ */
 /* ---------         HEADER          -------------- */
@@ -31,7 +192,7 @@ nav {
     font-size: 18px;
     padding: 8px 15px;
     border-radius: 25px;
-    background-color: rgb(9 9 9 / 30%);
+    background-color: rgb(0 0 0 / 30%);
     color: #fff;
   }
 
@@ -39,6 +200,7 @@ nav {
     background-color: #e03e6f
   }
 
+  /* Light/darkmode Buttons */
   .button {
     height: 35px;
     width: 35px;
@@ -51,14 +213,33 @@ nav {
     background-color: black;
     cursor: pointer;
   }
+}
 
-  .button-move {
-    position: fixed;
-    inset: auto 40px 40px auto;
-    z-index: -100
+/* Fixed l/dm button */
+.button-fixed {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  
+  .fa-solid {
+    position: relative;
+    font-size: 20px;
+    color: white;
   }
+}
 
+.button-fixed-fixed {
+  inset: auto 20px 20px auto;
+  transition: all 0.15s ease-out;
+}
 
+.button-sticky-bottom {
+  inset: auto 20px 90px auto;
+  transition: all 0.25s;
 }
 
 .header-wrapper {
@@ -77,17 +258,16 @@ nav {
 
 .hero-banner {
   background:
-    url(../img/maybe-bck.jpeg)
+    url(../img/banner-bg.jpeg)
     no-repeat
-    fixed
-    0px -40px;
+    fixed;
   background-size: cover;
   clip-path: polygon(100% 100%, 75% 90%, 50% 100%, 25% 90%, 0 100%, 0 0, 100% 0);
 }
 
 
 .banner-content {
-  height: 120svh;
+  min-height: 120svh;
   color:white;
 }
 
@@ -143,6 +323,22 @@ nav {
 /* ------------------------------------------------ */
 /* ------------      About           -------------- */
 /* ------------------------------------------------ */
+.img img {
+  height: 350px;
+}
+
+.img-cat {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-food {
+  clip-path: circle(43% at 50% 51%);
+}
+
+.img-temp .temp {
+  height: 250px;
+  width: 375px;
+}
 
 .section-wrapper {
   background-color: rgb(78 59 190 / 25%);
@@ -153,8 +349,6 @@ nav {
 
   h3 {
     margin-top: 50px;
-    /* font-size: 45px;
-    font-weight: 900; */
     align-self: center;
     margin-bottom: 20px;
 
@@ -189,7 +383,7 @@ nav {
 }
 
 
-.cats, .games, .food, .cooking, .languages {
+.brief-bio, .cats, .food, .cooking, .languages {
   font-size: 16px;
   width: 53%;
   color: white;
@@ -202,12 +396,12 @@ nav {
 
   p {
     transform: rotate(3deg);
-    max-width: calc(100% - 40px);
+    max-width: calc(100% - 80px);
     margin: 10px;
   }
 }
 
-.cats, .languages {
+.brief-bio, .languages {
   background-image: 
     linear-gradient(to bottom right, 
     rgb(45 45 99 / 60%),
@@ -215,7 +409,7 @@ nav {
     rgb(131 151 222 / 60%)
       );
 }
-.games, .cooking {
+.cats, .cooking {
   background-image: 
     linear-gradient(to top left, 
     rgb(45 45 99 / 60%),
@@ -244,6 +438,25 @@ nav {
 /* ------------      experience          ---------- */
 /* ------------------------------------------------ */
 
+.link {
+  margin-top: 10px;
+  text-shadow: none;
+  }
+
+  .link a {
+    border-bottom: 1px solid transparent;
+    transition: border 0.25s ease-in-out;
+  }
+
+  .link a:hover{
+    border-bottom: 1px solid #000;
+  }
+
+
+
+.badges {
+  width: 70%;
+}
 /* ------------------------------------------------ */
 /* ------------      Footer           ------------- */
 /* ------------------------------------------------ */
@@ -262,6 +475,23 @@ footer {
   text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
 }
 
+.totop {
+  font-size: 22px;
+  font-weight: 400;
+  align-self: center;
+  line-height: 50px;
+
+  a {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: border 0.25s ease-in-out;
+  }
+
+  a:hover{
+    border-bottom: 2px solid #fff;
+  }
+}
+
 .icons {
   font-size: 30px;
   width: 150px;
@@ -272,14 +502,17 @@ footer {
   }
 
   .fa-envelope:hover {
-    color: #f00;
+    color: #ff0000;
+    filter: contrast(50%);
   }
 
   .fa-linkedin:hover {
     color: #00f;
+    filter: contrast(50%);
   }
 
   .fa-github:hover {
     color: #000;
+    filter: contrast(50%);
   }
 }
