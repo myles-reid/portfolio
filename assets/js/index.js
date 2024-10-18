@@ -24,6 +24,11 @@ const words = select('.word-wrapper');
 const phrase = select('.phrase')
 const stickyButton = select('#button-sticky');
 const stickySymbol = select('#sticky-symbol');
+const bioBox = select('#bio');
+const catBox = select('#cats');
+const foodBox = select('#food');
+const cookBox = select('#cooking');
+const langBox = select('#lang');
 
 
 
@@ -125,4 +130,36 @@ listen('scroll', window, () => {
   }
 });
 
+//Box animation triggers
+const scrollOffSet = 200;
+
+const elementInView = (element, offset = 0) => {
+  const elementTop = element.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    ((window.innerHeight || document.documentElement.clientHeight) - offset)
+  );
+};
+
+function addAnimateScrollElement(element, animation){
+  classRemove(element, 'hidden');
+  classAdd(element, animation);
+}
+
+
+const handleScrollAnimation = (element, animation) => {
+  if (elementInView(element, scrollOffSet)) {
+    addAnimateScrollElement(element, animation);
+  }
+}
+
+listen('scroll', window, () => {
+  handleScrollAnimation(bioBox, 'fadein');
+  handleScrollAnimation(catBox, 'rotatein');
+  handleScrollAnimation(foodBox, 'bouncein-top');
+  handleScrollAnimation(cookBox, 'swipein-left');
+  handleScrollAnimation(langBox, 'slidein-left');
+}) 
+  
 

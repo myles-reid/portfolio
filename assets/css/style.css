@@ -212,6 +212,8 @@ nav {
     line-height: 35px;
     background-color: black;
     cursor: pointer;
+    padding-top: 4px;
+
   }
 }
 
@@ -274,7 +276,7 @@ nav {
 .banner-text {
   width: 40rem;
   height: 30rem;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   border-radius: var(--app-border-radius);
   background-image: 
@@ -285,6 +287,10 @@ nav {
       );
   box-shadow: 0px 0px 0px .5px rgb(255 255 255 / 50%);
   text-shadow: 1px 1px 1px #000;
+
+  p {
+    padding: 10px;
+  }
 }
 
 .banner-title {
@@ -292,13 +298,14 @@ nav {
   font-size: 35px;
   font-weight: 700;
   letter-spacing: .5px;
+  padding-top: 5px;
 }
 
 .banner-blurb {
   font-size: 24px;
   font-weight: 400;
   width: 350px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   letter-spacing: .5px;
 }
 
@@ -309,7 +316,7 @@ nav {
   font-weight: 600;  
   padding: 10px 20px;
   border-radius: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .intouch-button:hover {
@@ -323,6 +330,7 @@ nav {
 /* ------------------------------------------------ */
 /* ------------      About           -------------- */
 /* ------------------------------------------------ */
+
 .img img {
   height: 350px;
 }
@@ -438,6 +446,13 @@ nav {
 /* ------------      experience          ---------- */
 /* ------------------------------------------------ */
 
+.section-wrapper-inner-exp {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .link {
   margin-top: 10px;
   text-shadow: none;
@@ -514,5 +529,158 @@ footer {
   .fa-github:hover {
     color: #000;
     filter: contrast(50%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  
+  .banner-text {
+    width: 35rem;
+    height: 25rem;
+
+    p{
+      padding: 15px;
+    }
+  }
+  
+  .banner-title {
+    font-size: 28px;
+  }
+
+  .banner-blurb {
+    font-size: 20px;
+  }
+
+
+  .section-wrapper-inner {
+    align-items: center;
+    height: 200svh;
+    justify-content: space-between;
+  }
+  .about-box, .exp-box {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .about-box {
+    height: 33.333333333%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .about-box:nth-of-type(1){
+    margin-top: 60px;
+    height: calc(33.33333% + 100px)
+  }
+
+  .about-box:nth-of-type(2) {
+    height: calc(33.333333333% - 200px)
+  }
+
+  .about-box:nth-last-of-type() {
+    margin-bottom: 60px;
+    height: calc(33.3333333% - 60px)
+  }
+
+  .section-wrapper-inner-exp {
+    height: 150svh;
+  }
+
+
+  .exp-box {
+    height: 50%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .exp-box:nth-of-type(1) {
+    height: calc(50% + 200px);
+  }
+
+  .brief-bio, .cats, .food, .cooking, .languages {
+    justify-content: space-evenly;
+    width: 80%;
+    height: 300px;
+    translate: 0px;
+  }
+
+  footer {
+    .icons {
+      font-size: 24px;
+    }
+
+    .totop {
+      font-size: 18px;
+    }
+
+    .copyright {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-banner {
+    background-position: 50%;
+  }
+
+  .img img {
+    height: 250px;
+  }
+
+  .img .temp {
+    height: 200px;
+    width: 325px;
+  }
+
+  .brief-bio, .cats, .food, .cooking, .languages {
+    height: fit-content;
+    font-size: 14px;
+
+    p:nth-child(1) {
+      padding-top: 10px;
+    }
+
+    p:nth-child(2)  {
+      padding-bottom:10px;
+    }
+  }
+
+  .badges {
+    img {
+      width: 33.33333%;
+    }
+
+    img::nth-of-type(3) {
+      width: calc(33.33333% + 15px);
+    }
+  }
+
+  footer {
+    .icons {
+      font-size: 20px;
+      width: 100px;
+    }
+
+    .toptop {
+      font-size: 16px;
+      text-wrap: nowrap;
+    }
+
+    .copyright {
+      font-size: 12px;
+      font-weight: 200;
+      text-wrap: nowrap;
+    }
+
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about, .experience {
+    h3 {
+      font-size: 40px;
+    }
   }
 }
