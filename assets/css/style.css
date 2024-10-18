@@ -49,6 +49,13 @@ nav {
     align-items: center;
     line-height: 35px;
     background-color: black;
+    cursor: pointer;
+  }
+
+  .button-move {
+    position: fixed;
+    inset: auto 40px 40px auto;
+    z-index: -100
   }
 
 
@@ -77,6 +84,7 @@ nav {
   background-size: cover;
   clip-path: polygon(100% 100%, 75% 90%, 50% 100%, 25% 90%, 0 100%, 0 0, 100% 0);
 }
+
 
 .banner-content {
   height: 120svh;
@@ -128,15 +136,109 @@ nav {
   background-color: #e03e6f;
 }
 
+.divider-color {
+  background-color: rgb(78 59 190 / 25%)
+}
+
 /* ------------------------------------------------ */
 /* ------------      About           -------------- */
 /* ------------------------------------------------ */
+
+.section-wrapper {
+  background-color: rgb(78 59 190 / 25%);
+  clip-path: polygon(100% 100%, 80% 98%, 0% 100%, 0% -0.02%, 100% -0.02%);
+}
+
 .about, .experience {
-  height: 100svh;
-  margin-top: 50px;
+
+  h3 {
+    margin-top: 50px;
+    /* font-size: 45px;
+    font-weight: 900; */
+    align-self: center;
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 45px;
+    font-weight: 700;
+    color: #a469a0;
+    text-shadow: 1px 1px 1px #783d72,
+        1px 2px 1px #783d72,
+        1px 3px 1px #783d72,
+        1px 4px 1px #783d72,
+        1px 5px 1px #783d72,
+        1px 6px 1px #783d72,
+        1px 7px 1px #783d72,
+        1px 8px 1px #783d72,
+        1px 9px 1px #783d72,
+        1px 10px 1px #783d72,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+  }
+
+
+.about-box, .exp-box {
+  height: 350px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  filter:drop-shadow(3px 3px 3px rgba(0,0,0,0.8));
 }
 
 
+.cats, .games, .food, .cooking, .languages {
+  font-size: 16px;
+  width: 53%;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%); 
+  letter-spacing: .2px;
+  transform: rotate(-3deg);
+  translate: 20px;
+  clip-path: inset(0 0 0 0 round 20% 5% 20% 5%);
+  box-shadow: 1px 18px 6px rgba(16,16,16,0.4);
+
+  p {
+    transform: rotate(3deg);
+    max-width: calc(100% - 40px);
+    margin: 10px;
+  }
+}
+
+.cats, .languages {
+  background-image: 
+    linear-gradient(to bottom right, 
+    rgb(45 45 99 / 60%),
+    rgb(78 59 190 / 60%),
+    rgb(131 151 222 / 60%)
+      );
+}
+.games, .cooking {
+  background-image: 
+    linear-gradient(to top left, 
+    rgb(45 45 99 / 60%),
+    rgb(78 59 190 / 60%),
+    rgb(131 151 222 / 60%)
+      );
+  transform: rotate(6deg);
+  margin-bottom: -20px;
+  translate: -40px;
+
+  p {
+    transform: rotate(-6deg);
+  }
+}
+
+.food {
+  background-image: 
+    linear-gradient(to left,
+    rgb(45 45 99 / 60%),
+    rgb(78 59 190 / 60%),
+    rgb(131 151 222 / 60%)
+      );
+}
 
 /* ------------------------------------------------ */
 /* ------------      experience          ---------- */
